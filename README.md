@@ -2,7 +2,6 @@ WpfPageTransition
 ====================================
 
 WpfPageTransition is an executable to show how page transitions work in C# WPF.
-The executable was written and tested in .Net 5.0.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/e47s20lp6h91o56t?svg=true)](https://ci.appveyor.com/project/SeppPenner/wpfpagetransition)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/WpfPageTransition.svg)](https://github.com/SeppPenner/WpfPageTransition/issues)
