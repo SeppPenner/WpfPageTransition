@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="App.xaml.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,12 +7,11 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace WpfPageTransitionDemo
+namespace WpfPageTransitionDemo;
+
+/// <summary>
+/// The app class.
+/// </summary>
+public partial class App
 {
-    /// <summary>
-    /// The app class.
-    /// </summary>
-    public partial class App
-    {
-    }
 }

@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="NewPage.xaml.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,19 +7,18 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace WpfPageTransitionDemo
+namespace WpfPageTransitionDemo;
+
+/// <summary>
+/// The new page class.
+/// </summary>
+public partial class NewPage
 {
     /// <summary>
-    /// The new page class.
+    /// Initializes a new instance of the <see cref="NewPage"/> class.
     /// </summary>
-    public partial class NewPage
+    public NewPage()
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NewPage"/> class.
-        /// </summary>
-        public NewPage()
-        {
-            this.InitializeComponent();
-        }
+        this.InitializeComponent();
     }
 }

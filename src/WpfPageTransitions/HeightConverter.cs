@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="HeightConverter.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,53 +7,47 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace WpfPageTransitions
+namespace WpfPageTransitions;
+
+/// <inheritdoc cref="IValueConverter"/>
+/// <summary>
+/// The height converter class.
+/// </summary>
+/// <seealso cref="IValueConverter"/>
+public class HeightConverter : IValueConverter
 {
-    using System;
-    using System.Globalization;
-    using System.Windows.Data;
+    /// <inheritdoc cref="IValueConverter"/>
+    /// <summary>
+    /// Converts the value.
+    /// </summary>
+    /// <param name="value">The value.</param>
+    /// <param name="targetType">The target type.</param>
+    /// <param name="parameter">The parameter.</param>
+    /// <param name="culture">The culture.</param>
+    /// <returns>A new <see cref="object"/>.</returns>
+    /// <seealso cref="IValueConverter"/>
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        if (value is not null)
+        {
+            return (double)value / 4;
+        }
+
+        return 0;
+    }
 
     /// <inheritdoc cref="IValueConverter"/>
     /// <summary>
-    /// The height converter class.
+    /// Converts the value back.
     /// </summary>
+    /// <param name="value">The value.</param>
+    /// <param name="targetType">The target type.</param>
+    /// <param name="parameter">The parameter.</param>
+    /// <param name="culture">The culture.</param>
+    /// <returns>A new <see cref="object"/>.</returns>
     /// <seealso cref="IValueConverter"/>
-    // ReSharper disable once UnusedMember.Global
-    public class HeightConverter : IValueConverter
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        /// <inheritdoc cref="IValueConverter"/>
-        /// <summary>
-        /// Converts the value.
-        /// </summary>
-        /// <param name="value">The value.</param>
-        /// <param name="targetType">The target type.</param>
-        /// <param name="parameter">The parameter.</param>
-        /// <param name="culture">The culture.</param>
-        /// <returns>A new <see cref="object"/>.</returns>
-        /// <seealso cref="IValueConverter"/>
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            if (value != null)
-            {
-                return (double)value / 4;
-            }
-
-            return 0;
-        }
-
-        /// <inheritdoc cref="IValueConverter"/>
-        /// <summary>
-        /// Converts the value back.
-        /// </summary>
-        /// <param name="value">The value.</param>
-        /// <param name="targetType">The target type.</param>
-        /// <param name="parameter">The parameter.</param>
-        /// <param name="culture">The culture.</param>
-        /// <returns>A new <see cref="object"/>.</returns>
-        /// <seealso cref="IValueConverter"/>
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotImplementedException();
-        }
+        throw new NotImplementedException();
     }
 }
