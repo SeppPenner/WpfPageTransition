@@ -107,7 +107,7 @@ public partial class PageTransition
         }
 
         var hidePage = storyboard.Clone();
-        hidePage.Completed += this.HidePageCompleted;
+        hidePage.Completed += this.HidePageCompleted!;
         hidePage.Begin(this.ContentPresenter);
     }
 
